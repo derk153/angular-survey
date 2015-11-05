@@ -24,7 +24,9 @@ angular.module('appApp')
       value: 'input'
     }];
 
-    $scope.formData = {name: ''};
+    $scope.formData = {
+      name: ''
+    };
     $scope.result = {};
     $scope.questions = [];
 
@@ -56,7 +58,7 @@ angular.module('appApp')
       item.splice(index, 1);
     };
 
-    $scope.submitSurvey = function(data){
+    $scope.submitSurvey = function(data) {
       // surveyService.addSurvey(data);
       $scope.formData.questions = data;
       // $http.get('data/questions.json').success(function(data) {
@@ -64,7 +66,7 @@ angular.module('appApp')
       // });
     };
 
-    $scope.addSurvey = function () {
+    $scope.addSurvey = function() {
       // var result = JSON.stringify($scope.formData);
       $scope.result = $scope.formData;
       $state.go('main.result');

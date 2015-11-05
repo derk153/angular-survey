@@ -1,7 +1,7 @@
 <div class="form-group">
   <div class="radio" ng-repeat="(key, value) in question.options">
     <label>
-      <input type="radio" ng-model="question.value" value="{{ key }}">
+      <input type="radio" ng-model="question.value" value="{{ key }}" ng-required="!question.value">
       {{ value }}
     </label>
   </div>
