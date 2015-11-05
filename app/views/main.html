@@ -1,7 +1,18 @@
-<div class="jumbotron">
-  <h1>Awasome Survey</h1>
-
+<div class="navbar navbar-default navbar-centered" role="navigation">
+  <div class="container">
+      <ul class="nav navbar-nav">
+        <li ui-sref-active="active">
+          <a ui-sref=".create">Create</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref=".take">Take</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref=".result">Result</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div class="row marketing">
-</div>
+<div id="survey-views" ui-view></div>
