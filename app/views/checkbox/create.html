@@ -1,0 +1,21 @@
+<div class="form-group" ng-repeat="option in question.options track by $index">
+  <div class="col-md-offset-2 col-md-10">
+    <div class="input-group">
+
+      <input class="form-control" ng-model="question.options[$index]" type="text"/>
+      <span class="input-group-btn">
+        <button class="btn btn-danger" ng-click="removeField(question.options, $index)" type="button">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-md-offset-2 col-md-10">
+    <button class="btn btn-default" ng-click="addField(question.options)" type="button">
+      <span class="glyphicon glyphicon-plus"></span>
+      Add field</button>
+  </div>
+</div>

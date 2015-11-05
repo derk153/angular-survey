@@ -1,0 +1,8 @@
+<div class="form-group">
+  <div class="checkbox" ng-repeat="(key, value) in question.options">
+    <label>
+      <input ng-model="question.value[value]" type="checkbox">
+      {{ value }}
+    </label>
+  </div>
+</div>

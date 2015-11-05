@@ -1,0 +1,13 @@
+<legend>
+  Result
+</legend>
+<div class="container-fluid result">
+  <div class="row">
+    <label>Name:</label>
+    <span>{{result.name}}</span>
+  </div>
+  <div class="row" ng-repeat="question in result.questions">
+    <label>{{ question.question }}</label>
+    <ng-include src="'views/'+question.type+'/show.html'"></ng-include>
+  </div>
+</div>

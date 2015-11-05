@@ -1,0 +1,17 @@
+<legend>
+  Survey
+</legend>
+<form ng-submit="addSurvey(formData)" role="form">
+  <div class="form-group">
+    <label>Name</label>
+    <input class="form-control" ng-model="formData.name" placeholder="Your Name" type="text"/>
+  </div>
+  <div class="form-group" ng-repeat="question in formData.questions">
+    <label>{{ question.question }}</label>
+    <ng-include src="'views/'+ question.type +'/edit.html'"></ng-include>
+  </div>
+
+  <div class="form-group">
+    <input class="btn btn-primary" type="submit" value="Submit My Results">
+  </div>
+</form>
